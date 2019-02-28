@@ -1,3 +1,7 @@
+* {
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
 }
@@ -15,16 +19,35 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(4px + 2vmin);
   color: white;
 }
 
 .logo {
-  margin: 0 0 0 30px;
+  margin: 0 0 0 5vw;
+}
+
+.divider {
+  margin: 0 6px 0 10px;
+  color: #3a555e;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-header a {
+  color: #3a555e;
+  margin: 0 4px 0 4px;
+  font-size: calc(1px + 2vmin);
+}
+
+.App-header a:hover {
+  color: #61dafb;
+  text-shadow: 1px 2px 4px #131414;
+  transition-duration: 0.35s;
 }
 
 .login {
   margin: 0 10px 0 0;
+  font-size: calc(2px + 2vmin);
 }
 
 .login-inner {
@@ -40,6 +63,7 @@
   margin: 0 4px;
   padding: 0 0 0 4px;
   border-radius: 4px;
+  display: flex;
   /* box-shadow: 1px 2px 4px #131414; */
 }
 

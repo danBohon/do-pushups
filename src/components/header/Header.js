@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default class Header extends Component {
   constructor() {
@@ -60,14 +61,23 @@ export default class Header extends Component {
     console.log(user);
     return (
       <div className="App-header">
-        <span className="logo">DO PUSHUPS</span>
-        {/* <span>{this.props.children}</span> */}
+        <span className="left">
+          <span className="logo">DO PUSHUPS</span>
+          {/* <span>{this.props.children}</span> */}
+          <span className="nav">
+            <span className="divider">|</span>
+            <Link to="/home">Home</Link>
+            <Link to="/comps">All</Link>
+            <Link to="/create">Create</Link>
+          </span>
+        </span>
+
         <span className="login">
           {user.username ? (
-            <div className="login-inner">
-              <span>Welcome, {user.username}</span>
+            <span>
+              Welcome, {user.username}
               <button onClick={this.logout}>Logout</button>
-            </div>
+            </span>
           ) : (
             <div className="login-inner">
               <input
